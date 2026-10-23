@@ -1,0 +1,63 @@
+goos: darwin
+goarch: arm64
+pkg: redhow/researches/serde/go
+cpu: Apple M2 Max
+BenchmarkCompression/zstd_json/compress_9-12         	     588	   6097899 ns/op	 201.31 MB/s	 1216363 B/op	       9 allocs/op
+BenchmarkCompression/zstd_json/compress_1-12         	     879	   3809386 ns/op	 322.25 MB/s	 1057001 B/op	      11 allocs/op
+BenchmarkCompression/zstd_json/compress_3-12         	     734	   4756127 ns/op	 258.10 MB/s	 1415555 B/op	      10 allocs/op
+BenchmarkCompression/zstd_json/decompress_3-12       	    2312	   1575931 ns/op	 778.94 MB/s	 1231734 B/op	       3 allocs/op
+BenchmarkCompression/zstd_json/decode_plus_parse_3-12         	     256	  13954189 ns/op	  87.97 MB/s	 4894102 B/op	   20032 allocs/op
+BenchmarkEtlWindow/read/v1_decoder_stream-12                  	      88	  40686877 ns/op	  98.86 MB/s	 3410466 B/op	   98313 allocs/op
+BenchmarkEtlWindow/read/easyjson_per_line-12                  	     260	  13411842 ns/op	 299.91 MB/s	  262144 B/op	   65536 allocs/op
+BenchmarkEtlWindow/read/perfect_cast-12                       	   77606	     44851 ns/op	35068.74 MB/s	       0 B/op	       0 allocs/op
+BenchmarkEtlWindow/read/proto_decode-12                       	     736	   4963932 ns/op	 254.97 MB/s	 5758140 B/op	   98328 allocs/op
+BenchmarkEtlWindow/read/v1_zstd-12                            	      78	  46607045 ns/op	  86.30 MB/s	 7454488 B/op	   98318 allocs/op
+BenchmarkEtlWindow/write/v1_ndjson-12                         	     388	   9259276 ns/op	 434.41 MB/s	 8225410 B/op	   32770 allocs/op
+BenchmarkEtlWindow/write/easyjson_ndjson-12                   	     318	  11215250 ns/op	 358.65 MB/s	29030212 B/op	  154784 allocs/op
+BenchmarkEtlWindow/write/perfect-12                           	    3456	    995139 ns/op	1580.55 MB/s	 1572864 B/op	       1 allocs/op
+BenchmarkEtlWindow/write/proto_marshal-12                     	     942	   3939572 ns/op	 321.27 MB/s	 1269760 B/op	       1 allocs/op
+BenchmarkFlatBuffers/fb/read_tick-12                          	67061688	        55.80 ns/op	       8 B/op	       2 allocs/op
+BenchmarkFlatBuffers/fb/write_tick-12                         	27386352	       133.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkJSON/v1/unmarshal_reflection-12                      	     286	  12502838 ns/op	  98.18 MB/s	 3660027 B/op	   20025 allocs/op
+BenchmarkJSON/v1/unmarshal_into_any_dom-12                    	     272	  12884807 ns/op	  95.27 MB/s	 6090007 B/op	  243085 allocs/op
+BenchmarkJSON/v1/marshal_reflection-12                        	    1742	   2066895 ns/op	 593.91 MB/s	 1284581 B/op	       2 allocs/op
+BenchmarkJSON/easyjson/unmarshal-12                           	     812	   4454167 ns/op	 275.60 MB/s	 3659772 B/op	   20019 allocs/op
+BenchmarkJSON/easyjson/marshal-12                             	    2810	   1274440 ns/op	 963.21 MB/s	 1243493 B/op	      57 allocs/op
+BenchmarkProto/proto/marshal-12                               	    3130	   1169733 ns/op	 330.28 MB/s	  393216 B/op	       1 allocs/op
+BenchmarkProto/proto/unmarshal_full-12                        	    2100	   1746264 ns/op	 221.24 MB/s	 1670467 B/op	   30019 allocs/op
+BenchmarkCrud/json/parse_typed-12                             	 2475418	      1462 ns/op	  84.16 MB/s	     360 B/op	       9 allocs/op
+BenchmarkCrud/json/write_typed-12                             	12588360	       292.0 ns/op	 421.30 MB/s	     152 B/op	       2 allocs/op
+BenchmarkCrud/easyjson/parse_typed-12                         	 8880424	       399.6 ns/op	 307.78 MB/s	     104 B/op	       3 allocs/op
+BenchmarkCrud/proto/decode_full-12                            	15829636	       228.9 ns/op	 170.36 MB/s	     208 B/op	       5 allocs/op
+BenchmarkCrud/proto/marshal-12                                	22419313	       160.7 ns/op	 242.76 MB/s	      48 B/op	       1 allocs/op
+BenchmarkCrud/perfect/cast_validated-12                       	1000000000	         2.473 ns/op	19407.90 MB/s	       0 B/op	       0 allocs/op
+BenchmarkCrud/json/parse_typed#01-12                          	  700015	      5268 ns/op	  92.83 MB/s	     912 B/op	      17 allocs/op
+BenchmarkCrud/json/write_typed#01-12                          	 3757684	       950.4 ns/op	 514.51 MB/s	     536 B/op	       2 allocs/op
+BenchmarkCrud/easyjson/parse_typed#01-12                      	 2175448	      1653 ns/op	 295.76 MB/s	     656 B/op	      11 allocs/op
+BenchmarkCrud/proto/decode_full#01-12                         	 4788616	       774.6 ns/op	 198.81 MB/s	     664 B/op	      16 allocs/op
+BenchmarkCrud/proto/marshal#01-12                             	 6673567	       546.5 ns/op	 281.80 MB/s	     160 B/op	       1 allocs/op
+BenchmarkCrud/perfect/cast_validated#01-12                    	600065506	         5.951 ns/op	32263.09 MB/s	       0 B/op	       0 allocs/op
+BenchmarkCrud/json/parse_typed#02-12                          	  347582	     10173 ns/op	  96.24 MB/s	    1712 B/op	      26 allocs/op
+BenchmarkCrud/json/write_typed#02-12                          	 1989730	      1818 ns/op	 538.54 MB/s	    1048 B/op	       2 allocs/op
+BenchmarkCrud/easyjson/parse_typed#02-12                      	 1000000	      3390 ns/op	 288.76 MB/s	    1456 B/op	      20 allocs/op
+BenchmarkCrud/proto/decode_full#02-12                         	 2512664	      1440 ns/op	 213.84 MB/s	    1272 B/op	      29 allocs/op
+BenchmarkCrud/proto/marshal#02-12                             	 3604513	       996.2 ns/op	 309.19 MB/s	     320 B/op	       1 allocs/op
+BenchmarkCrud/perfect/cast_validated#02-12                    	356918322	        10.10 ns/op	38031.71 MB/s	       0 B/op	       0 allocs/op
+BenchmarkCrud/json/parse_typed#03-12                          	  179107	     20151 ns/op	  97.07 MB/s	    3312 B/op	      43 allocs/op
+BenchmarkCrud/json/write_typed#03-12                          	  999326	      3574 ns/op	 547.36 MB/s	    2073 B/op	       2 allocs/op
+BenchmarkCrud/easyjson/parse_typed#03-12                      	  531939	      6848 ns/op	 285.62 MB/s	    3056 B/op	      37 allocs/op
+BenchmarkCrud/proto/decode_full#03-12                         	 1321526	      2725 ns/op	 225.65 MB/s	    2488 B/op	      54 allocs/op
+BenchmarkCrud/proto/marshal#03-12                             	 1876143	      1921 ns/op	 320.13 MB/s	     640 B/op	       1 allocs/op
+BenchmarkCrud/perfect/cast_validated#03-12                    	189554410	        18.98 ns/op	40468.78 MB/s	       0 B/op	       0 allocs/op
+BenchmarkCrud/json/parse_typed#04-12                          	   35866	    100192 ns/op	  97.93 MB/s	   25328 B/op	     174 allocs/op
+BenchmarkCrud/json/write_typed#04-12                          	  204414	     17330 ns/op	 566.19 MB/s	   10274 B/op	       2 allocs/op
+BenchmarkCrud/easyjson/parse_typed#04-12                      	  105456	     34667 ns/op	 283.03 MB/s	   25072 B/op	     168 allocs/op
+BenchmarkCrud/proto/decode_full#04-12                         	  274452	     12976 ns/op	 237.98 MB/s	   13112 B/op	     249 allocs/op
+BenchmarkCrud/proto/marshal#04-12                             	  398152	      9364 ns/op	 329.76 MB/s	    3200 B/op	       1 allocs/op
+BenchmarkCrud/perfect/cast_validated#04-12                    	40282029	        89.49 ns/op	42907.93 MB/s	       0 B/op	       0 allocs/op
+BenchmarkFlat48/perfect/cast-12                               	1000000000	         2.113 ns/op	227147950.02 MB/s	       0 B/op	       0 allocs/op
+BenchmarkFlat48/perfect/cast_validated-12                     	  323385	     11106 ns/op	43219.18 MB/s	       0 B/op	       0 allocs/op
+BenchmarkFlat48/perfect/symbol_lookup-12                      	  343484	     10606 ns/op	45258.24 MB/s	       0 B/op	       0 allocs/op
+BenchmarkFlat48/perfect/decode_manual_copy-12                 	   55914	     64464 ns/op	7446.06 MB/s	       0 B/op	       0 allocs/op
+PASS
+ok  	redhow/researches/serde/go	202.891s
