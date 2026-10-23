@@ -1,0 +1,983 @@
+   Compiling serde-bench v0.1.0 (/Users/d.shreyder/IdeaProjects/red-how/researches/serde/rust)
+    Finished `bench` profile [optimized] target(s) in 17.13s
+     Running unittests src/lib.rs (target/release/build/serde-bench/350dc5a35f5b7e2b/out/serde_bench-350dc5a35f5b7e2b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/etl.rs (target/release/build/serde-bench/1a23223a056ce23e/out/etl-1a23223a056ce23e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/gen.rs (target/release/build/serde-bench/1ccf5b66ca68df0e/out/gen-1ccf5b66ca68df0e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running benches/compression.rs (target/release/build/serde-bench/b7d265fd2100cd30/out/compression-b7d265fd2100cd30)
+Gnuplot not found, using plotters backend
+Benchmarking compression/zstd_json/compress/1
+Benchmarking compression/zstd_json/compress/1: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 8.6s, enable flat sampling, or reduce sample count to 50.
+Benchmarking compression/zstd_json/compress/1: Collecting 100 samples in estimated 8.6339 s (5050 iterations)
+Benchmarking compression/zstd_json/compress/1: Analyzing
+compression/zstd_json/compress/1
+                        time:   [1.6611 ms 1.6700 ms 1.6793 ms]
+                        thrpt:  [697.14 MiB/s 701.00 MiB/s 704.78 MiB/s]
+                 change:
+                        time:   [−2.6225% −0.9183% +0.4510%] (p = 0.23 > 0.05)
+                        thrpt:  [−0.4490% +0.9268% +2.6931%]
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high mild
+Benchmarking compression/zstd_json/compress/3
+Benchmarking compression/zstd_json/compress/3: Warming up for 3.0000 s
+Benchmarking compression/zstd_json/compress/3: Collecting 100 samples in estimated 5.0870 s (2300 iterations)
+Benchmarking compression/zstd_json/compress/3: Analyzing
+compression/zstd_json/compress/3
+                        time:   [2.2453 ms 2.2558 ms 2.2666 ms]
+                        thrpt:  [516.50 MiB/s 518.97 MiB/s 521.40 MiB/s]
+                 change:
+                        time:   [−0.8250% +0.5210% +1.6530%] (p = 0.47 > 0.05)
+                        thrpt:  [−1.6261% −0.5183% +0.8319%]
+                        No change in performance detected.
+Benchmarking compression/zstd_json/compress/9
+Benchmarking compression/zstd_json/compress/9: Warming up for 3.0000 s
+Benchmarking compression/zstd_json/compress/9: Collecting 100 samples in estimated 5.6912 s (500 iterations)
+Benchmarking compression/zstd_json/compress/9: Analyzing
+compression/zstd_json/compress/9
+                        time:   [11.211 ms 11.297 ms 11.385 ms]
+                        thrpt:  [102.83 MiB/s 103.63 MiB/s 104.42 MiB/s]
+                 change:
+                        time:   [−9.7167% −7.6130% −5.4679%] (p = 0.00 < 0.05)
+                        thrpt:  [+5.7842% +8.2403% +10.762%]
+                        Performance has improved.
+Benchmarking compression/zstd_json/decompress/3
+Benchmarking compression/zstd_json/decompress/3: Warming up for 3.0000 s
+Benchmarking compression/zstd_json/decompress/3: Collecting 100 samples in estimated 7.3198 s (10k iterations)
+Benchmarking compression/zstd_json/decompress/3: Analyzing
+compression/zstd_json/decompress/3
+                        time:   [724.55 µs 728.75 µs 733.78 µs]
+                        thrpt:  [1.5580 GiB/s 1.5688 GiB/s 1.5779 GiB/s]
+                 change:
+                        time:   [−0.9711% +0.2450% +1.4753%] (p = 0.85 > 0.05)
+                        thrpt:  [−1.4538% −0.2444% +0.9806%]
+                        No change in performance detected.
+Found 12 outliers among 100 measurements (12.00%)
+  2 (2.00%) low mild
+  3 (3.00%) high mild
+  7 (7.00%) high severe
+Benchmarking compression/zstd_json/decode_plus_parse/3
+Benchmarking compression/zstd_json/decode_plus_parse/3: Warming up for 3.0000 s
+Benchmarking compression/zstd_json/decode_plus_parse/3: Collecting 100 samples in estimated 5.0502 s (1600 iterations)
+Benchmarking compression/zstd_json/decode_plus_parse/3: Analyzing
+compression/zstd_json/decode_plus_parse/3
+                        time:   [3.2576 ms 3.2700 ms 3.2826 ms]
+                        thrpt:  [356.64 MiB/s 358.01 MiB/s 359.37 MiB/s]
+                 change:
+                        time:   [+2.7216% +3.3241% +3.9281%] (p = 0.00 < 0.05)
+                        thrpt:  [−3.7796% −3.2171% −2.6495%]
+                        Performance has regressed.
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking compression/zstd_proto/compress/3
+Benchmarking compression/zstd_proto/compress/3: Warming up for 3.0000 s
+Benchmarking compression/zstd_proto/compress/3: Collecting 100 samples in estimated 9.3484 s (10k iterations)
+Benchmarking compression/zstd_proto/compress/3: Analyzing
+compression/zstd_proto/compress/3
+                        time:   [909.61 µs 914.77 µs 920.45 µs]
+                        thrpt:  [400.28 MiB/s 402.77 MiB/s 405.05 MiB/s]
+                 change:
+                        time:   [−0.1084% +0.6044% +1.3760%] (p = 0.24 > 0.05)
+                        thrpt:  [−1.3573% −0.6008% +0.1086%]
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking compression/zstd_rkyv/compress/3
+Benchmarking compression/zstd_rkyv/compress/3: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 6.8s, enable flat sampling, or reduce sample count to 60.
+Benchmarking compression/zstd_rkyv/compress/3: Collecting 100 samples in estimated 6.7595 s (5050 iterations)
+Benchmarking compression/zstd_rkyv/compress/3: Analyzing
+compression/zstd_rkyv/compress/3
+                        time:   [1.3405 ms 1.3483 ms 1.3561 ms]
+                        thrpt:  [450.09 MiB/s 452.69 MiB/s 455.31 MiB/s]
+                 change:
+                        time:   [−0.1660% +0.6805% +1.5624%] (p = 0.20 > 0.05)
+                        thrpt:  [−1.5384% −0.6759% +0.1663%]
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking compression/zstd_flatwire/compress/3
+Benchmarking compression/zstd_flatwire/compress/3: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 6.5s, enable flat sampling, or reduce sample count to 60.
+Benchmarking compression/zstd_flatwire/compress/3: Collecting 100 samples in estimated 6.4571 s (5050 iterations)
+Benchmarking compression/zstd_flatwire/compress/3: Analyzing
+compression/zstd_flatwire/compress/3
+                        time:   [1.2540 ms 1.2583 ms 1.2637 ms]
+                        thrpt:  [362.25 MiB/s 363.79 MiB/s 365.05 MiB/s]
+                 change:
+                        time:   [−2.7289% −1.7178% −0.7115%] (p = 0.00 < 0.05)
+                        thrpt:  [+0.7166% +1.7478% +2.8055%]
+                        Change within noise threshold.
+Found 9 outliers among 100 measurements (9.00%)
+  4 (4.00%) high mild
+  5 (5.00%) high severe
+
+     Running benches/etl.rs (target/release/build/serde-bench/8e2fe931603d8d63/out/etl-8e2fe931603d8d63)
+Gnuplot not found, using plotters backend
+Benchmarking etl/read/serde_stream/32768
+Benchmarking etl/read/serde_stream/32768: Warming up for 3.0000 s
+Benchmarking etl/read/serde_stream/32768: Collecting 100 samples in estimated 5.4026 s (700 iterations)
+Benchmarking etl/read/serde_stream/32768: Analyzing
+etl/read/serde_stream/32768
+                        time:   [7.7235 ms 7.7532 ms 7.7855 ms]
+                        thrpt:  [492.71 MiB/s 494.77 MiB/s 496.67 MiB/s]
+                 change:
+                        time:   [−4.3612% −3.4269% −2.4846%] (p = 0.00 < 0.05)
+                        thrpt:  [+2.5479% +3.5485% +4.5601%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking etl/read/simd_lines/32768
+Benchmarking etl/read/simd_lines/32768: Warming up for 3.0000 s
+Benchmarking etl/read/simd_lines/32768: Collecting 100 samples in estimated 5.7778 s (400 iterations)
+Benchmarking etl/read/simd_lines/32768: Analyzing
+etl/read/simd_lines/32768
+                        time:   [14.761 ms 14.842 ms 14.922 ms]
+                        thrpt:  [257.08 MiB/s 258.45 MiB/s 259.88 MiB/s]
+                 change:
+                        time:   [+3.1296% +4.2179% +5.3010%] (p = 0.00 < 0.05)
+                        thrpt:  [−5.0342% −4.0472% −3.0346%]
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  7 (7.00%) low mild
+  1 (1.00%) high mild
+Benchmarking etl/read/flatwire_cast/32768
+Benchmarking etl/read/flatwire_cast/32768: Warming up for 3.0000 s
+Benchmarking etl/read/flatwire_cast/32768: Collecting 100 samples in estimated 5.1123 s (207k iterations)
+Benchmarking etl/read/flatwire_cast/32768: Analyzing
+etl/read/flatwire_cast/32768
+                        time:   [24.177 µs 24.329 µs 24.497 µs]
+                        thrpt:  [59.797 GiB/s 60.210 GiB/s 60.589 GiB/s]
+                 change:
+                        time:   [+1.9402% +2.7742% +3.7055%] (p = 0.00 < 0.05)
+                        thrpt:  [−3.5731% −2.6994% −1.9033%]
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+Benchmarking etl/read/rkyv_access/32768
+Benchmarking etl/read/rkyv_access/32768: Warming up for 3.0000 s
+Benchmarking etl/read/rkyv_access/32768: Collecting 100 samples in estimated 6.5486 s (10k iterations)
+Benchmarking etl/read/rkyv_access/32768: Analyzing
+etl/read/rkyv_access/32768
+                        time:   [642.20 µs 651.14 µs 660.52 µs]
+                        thrpt:  [2.9570 GiB/s 2.9996 GiB/s 3.0413 GiB/s]
+                 change:
+                        time:   [−9.1832% −7.1849% −5.0897%] (p = 0.00 < 0.05)
+                        thrpt:  [+5.3626% +7.7411% +10.112%]
+                        Performance has improved.
+Benchmarking etl/read/proto_decode/32768
+Benchmarking etl/read/proto_decode/32768: Warming up for 3.0000 s
+Benchmarking etl/read/proto_decode/32768: Collecting 100 samples in estimated 5.3618 s (1200 iterations)
+Benchmarking etl/read/proto_decode/32768: Analyzing
+etl/read/proto_decode/32768
+                        time:   [4.4373 ms 4.4568 ms 4.4775 ms]
+                        thrpt:  [269.57 MiB/s 270.82 MiB/s 272.02 MiB/s]
+                 change:
+                        time:   [−2.9589% −2.1528% −1.2851%] (p = 0.00 < 0.05)
+                        thrpt:  [+1.3019% +2.2002% +3.0491%]
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking etl/read/serde_zstd/32768
+Benchmarking etl/read/serde_zstd/32768: Warming up for 3.0000 s
+Benchmarking etl/read/serde_zstd/32768: Collecting 100 samples in estimated 5.1297 s (500 iterations)
+Benchmarking etl/read/serde_zstd/32768: Analyzing
+etl/read/serde_zstd/32768
+                        time:   [10.173 ms 10.215 ms 10.260 ms]
+                        thrpt:  [373.88 MiB/s 375.52 MiB/s 377.06 MiB/s]
+                 change:
+                        time:   [−4.4368% −3.3160% −1.9310%] (p = 0.00 < 0.05)
+                        thrpt:  [+1.9690% +3.4298% +4.6428%]
+                        Performance has improved.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+Benchmarking etl/write/serde_ndjson/32768
+Benchmarking etl/write/serde_ndjson/32768: Warming up for 3.0000 s
+Benchmarking etl/write/serde_ndjson/32768: Collecting 100 samples in estimated 5.3535 s (1000 iterations)
+Benchmarking etl/write/serde_ndjson/32768: Analyzing
+etl/write/serde_ndjson/32768
+                        time:   [5.3238 ms 5.3429 ms 5.3639 ms]
+                        thrpt:  [715.16 MiB/s 717.97 MiB/s 720.54 MiB/s]
+                 change:
+                        time:   [−6.7257% −5.5907% −4.4538%] (p = 0.00 < 0.05)
+                        thrpt:  [+4.6615% +5.9218% +7.2107%]
+                        Performance has improved.
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+Benchmarking etl/write/flatwire/32768
+Benchmarking etl/write/flatwire/32768: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 7.7s, enable flat sampling, or reduce sample count to 50.
+Benchmarking etl/write/flatwire/32768: Collecting 100 samples in estimated 7.7341 s (5050 iterations)
+Benchmarking etl/write/flatwire/32768: Analyzing
+etl/write/flatwire/32768
+                        time:   [1.5527 ms 1.5610 ms 1.5693 ms]
+                        thrpt:  [955.83 MiB/s 960.92 MiB/s 966.05 MiB/s]
+                 change:
+                        time:   [−0.9050% −0.3435% +0.2141%] (p = 0.26 > 0.05)
+                        thrpt:  [−0.2137% +0.3446% +0.9133%]
+                        No change in performance detected.
+Benchmarking etl/write/rkyv/32768
+Benchmarking etl/write/rkyv/32768: Warming up for 3.0000 s
+Benchmarking etl/write/rkyv/32768: Collecting 100 samples in estimated 7.3633 s (15k iterations)
+Benchmarking etl/write/rkyv/32768: Analyzing
+etl/write/rkyv/32768    time:   [483.71 µs 485.50 µs 487.46 µs]
+                        thrpt:  [4.0068 GiB/s 4.0229 GiB/s 4.0378 GiB/s]
+                 change:
+                        time:   [−5.7492% −4.5255% −3.2085%] (p = 0.00 < 0.05)
+                        thrpt:  [+3.3149% +4.7400% +6.0999%]
+                        Performance has improved.
+Benchmarking etl/write/proto/32768
+Benchmarking etl/write/proto/32768: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 9.1s, enable flat sampling, or reduce sample count to 50.
+Benchmarking etl/write/proto/32768: Collecting 100 samples in estimated 9.0555 s (5050 iterations)
+Benchmarking etl/write/proto/32768: Analyzing
+etl/write/proto/32768   time:   [1.7875 ms 1.7941 ms 1.8009 ms]
+                        thrpt:  [670.22 MiB/s 672.78 MiB/s 675.25 MiB/s]
+                 change:
+                        time:   [−3.6406% −2.5408% −1.4845%] (p = 0.00 < 0.05)
+                        thrpt:  [+1.5069% +2.6071% +3.7782%]
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+
+     Running benches/json.rs (target/release/build/serde-bench/79ffc271b30c1957/out/json-79ffc271b30c1957)
+Gnuplot not found, using plotters backend
+Benchmarking json/serde/parse_typed/10000
+Benchmarking json/serde/parse_typed/10000: Warming up for 3.0000 s
+Benchmarking json/serde/parse_typed/10000: Collecting 100 samples in estimated 5.2011 s (2000 iterations)
+Benchmarking json/serde/parse_typed/10000: Analyzing
+json/serde/parse_typed/10000
+                        time:   [2.5841 ms 2.5955 ms 2.6083 ms]
+                        thrpt:  [448.84 MiB/s 451.05 MiB/s 453.03 MiB/s]
+                 change:
+                        time:   [+0.1613% +1.2172% +2.2236%] (p = 0.16 > 0.05)
+                        thrpt:  [−2.1752% −1.2025% −0.1610%]
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking json/serde/parse_value_dom/10000
+Benchmarking json/serde/parse_value_dom/10000: Warming up for 3.0000 s
+Benchmarking json/serde/parse_value_dom/10000: Collecting 100 samples in estimated 5.0292 s (900 iterations)
+Benchmarking json/serde/parse_value_dom/10000: Analyzing
+json/serde/parse_value_dom/10000
+                        time:   [5.5912 ms 5.6168 ms 5.6444 ms]
+                        thrpt:  [207.41 MiB/s 208.43 MiB/s 209.38 MiB/s]
+                 change:
+                        time:   [−1.8419% −1.0168% −0.2107%] (p = 0.01 < 0.05)
+                        thrpt:  [+0.2111% +1.0273% +1.8765%]
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  6 (6.00%) high mild
+  1 (1.00%) high severe
+Benchmarking json/serde/write_typed/10000
+Benchmarking json/serde/write_typed/10000: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 6.3s, enable flat sampling, or reduce sample count to 60.
+Benchmarking json/serde/write_typed/10000: Collecting 100 samples in estimated 6.3079 s (5050 iterations)
+Benchmarking json/serde/write_typed/10000: Analyzing
+json/serde/write_typed/10000
+                        time:   [1.2816 ms 1.2855 ms 1.2891 ms]
+                        thrpt:  [908.17 MiB/s 910.67 MiB/s 913.46 MiB/s]
+                 change:
+                        time:   [+2.0721% +2.8111% +3.5859%] (p = 0.00 < 0.05)
+                        thrpt:  [−3.4618% −2.7342% −2.0300%]
+                        Performance has regressed.
+Found 13 outliers among 100 measurements (13.00%)
+  11 (11.00%) low mild
+  2 (2.00%) high mild
+Benchmarking json/serde/serialize_to_value_dom/10000
+Benchmarking json/serde/serialize_to_value_dom/10000: Warming up for 3.0000 s
+Benchmarking json/serde/serialize_to_value_dom/10000: Collecting 100 samples in estimated 5.2141 s (1400 iterations)
+Benchmarking json/serde/serialize_to_value_dom/10000: Analyzing
+json/serde/serialize_to_value_dom/10000
+                        time:   [3.6992 ms 3.7137 ms 3.7291 ms]
+                        thrpt:  [313.93 MiB/s 315.23 MiB/s 316.47 MiB/s]
+                 change:
+                        time:   [−2.0262% −0.5219% +0.8281%] (p = 0.47 > 0.05)
+                        thrpt:  [−0.8213% +0.5246% +2.0681%]
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking json/serde/write_from_value_dom/10000
+Benchmarking json/serde/write_from_value_dom/10000: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 7.3s, enable flat sampling, or reduce sample count to 50.
+Benchmarking json/serde/write_from_value_dom/10000: Collecting 100 samples in estimated 7.2935 s (5050 iterations)
+Benchmarking json/serde/write_from_value_dom/10000: Analyzing
+json/serde/write_from_value_dom/10000
+                        time:   [1.4359 ms 1.4485 ms 1.4639 ms]
+                        thrpt:  [799.72 MiB/s 808.20 MiB/s 815.32 MiB/s]
+                 change:
+                        time:   [−2.4020% −0.9201% +0.4940%] (p = 0.18 > 0.05)
+                        thrpt:  [−0.4916% +0.9287% +2.4611%]
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+Benchmarking json/simd/parse_typed/10000
+Benchmarking json/simd/parse_typed/10000: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 9.7s, enable flat sampling, or reduce sample count to 50.
+Benchmarking json/simd/parse_typed/10000: Collecting 100 samples in estimated 9.7090 s (5050 iterations)
+Benchmarking json/simd/parse_typed/10000: Analyzing
+json/simd/parse_typed/10000
+                        time:   [1.9025 ms 1.9116 ms 1.9222 ms]
+                        thrpt:  [609.05 MiB/s 612.42 MiB/s 615.36 MiB/s]
+                 change:
+                        time:   [−1.9176% −0.5026% +0.7521%] (p = 0.43 > 0.05)
+                        thrpt:  [−0.7465% +0.5051% +1.9551%]
+                        No change in performance detected.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+Benchmarking json/simd/parse_dom/10000
+Benchmarking json/simd/parse_dom/10000: Warming up for 3.0000 s
+Benchmarking json/simd/parse_dom/10000: Collecting 100 samples in estimated 5.1057 s (1300 iterations)
+Benchmarking json/simd/parse_dom/10000: Analyzing
+json/simd/parse_dom/10000
+                        time:   [3.8933 ms 3.9109 ms 3.9309 ms]
+                        thrpt:  [297.82 MiB/s 299.34 MiB/s 300.69 MiB/s]
+                 change:
+                        time:   [−0.5276% +0.0952% +0.7396%] (p = 0.96 > 0.05)
+                        thrpt:  [−0.7342% −0.0951% +0.5304%]
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high severe
+
+     Running benches/proto.rs (target/release/build/serde-bench/a952fce9e4fa43af/out/proto-a952fce9e4fa43af)
+Gnuplot not found, using plotters backend
+Benchmarking proto/prost/encode/10000
+Benchmarking proto/prost/encode/10000: Warming up for 3.0000 s
+Benchmarking proto/prost/encode/10000: Collecting 100 samples in estimated 5.2654 s (10k iterations)
+Benchmarking proto/prost/encode/10000: Analyzing
+proto/prost/encode/10000
+                        time:   [532.92 µs 535.51 µs 537.85 µs]
+                        thrpt:  [685.03 MiB/s 688.02 MiB/s 691.36 MiB/s]
+                 change:
+                        time:   [+0.2072% +1.0435% +1.8370%] (p = 0.06 > 0.05)
+                        thrpt:  [−1.8038% −1.0327% −0.2068%]
+                        No change in performance detected.
+Benchmarking proto/prost/decode_full/10000
+Benchmarking proto/prost/decode_full/10000: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 5.5s, enable flat sampling, or reduce sample count to 60.
+Benchmarking proto/prost/decode_full/10000: Collecting 100 samples in estimated 5.4742 s (5050 iterations)
+Benchmarking proto/prost/decode_full/10000: Analyzing
+proto/prost/decode_full/10000
+                        time:   [1.0593 ms 1.0621 ms 1.0650 ms]
+                        thrpt:  [345.94 MiB/s 346.91 MiB/s 347.81 MiB/s]
+                 change:
+                        time:   [+1.4670% +2.0031% +2.5740%] (p = 0.00 < 0.05)
+                        thrpt:  [−2.5094% −1.9638% −1.4458%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+
+     Running benches/sizes.rs (target/release/build/serde-bench/81a17bc89332ad51/out/sizes-81a17bc89332ad51)
+Gnuplot not found, using plotters backend
+Benchmarking crud/json/parse_typed/123
+Benchmarking crud/json/parse_typed/123: Warming up for 3.0000 s
+Benchmarking crud/json/parse_typed/123: Collecting 100 samples in estimated 5.0012 s (18M iterations)
+Benchmarking crud/json/parse_typed/123: Analyzing
+crud/json/parse_typed/123
+                        time:   [270.17 ns 271.50 ns 273.07 ns]
+                        thrpt:  [429.57 MiB/s 432.06 MiB/s 434.18 MiB/s]
+                 change:
+                        time:   [+17.404% +18.238% +19.117%] (p = 0.00 < 0.05)
+                        thrpt:  [−16.049% −15.425% −14.824%]
+                        Performance has regressed.
+Found 7 outliers among 100 measurements (7.00%)
+  7 (7.00%) high mild
+Benchmarking crud/json/write_typed/123
+Benchmarking crud/json/write_typed/123: Warming up for 3.0000 s
+Benchmarking crud/json/write_typed/123: Collecting 100 samples in estimated 5.0005 s (38M iterations)
+Benchmarking crud/json/write_typed/123: Analyzing
+crud/json/write_typed/123
+                        time:   [131.67 ns 132.30 ns 132.98 ns]
+                        thrpt:  [882.08 MiB/s 886.61 MiB/s 890.88 MiB/s]
+                 change:
+                        time:   [+6.9058% +7.6429% +8.3643%] (p = 0.00 < 0.05)
+                        thrpt:  [−7.7187% −7.1003% −6.4597%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking crud/simd/parse_typed/123
+Benchmarking crud/simd/parse_typed/123: Warming up for 3.0000 s
+Benchmarking crud/simd/parse_typed/123: Collecting 100 samples in estimated 5.0004 s (12M iterations)
+Benchmarking crud/simd/parse_typed/123: Analyzing
+crud/simd/parse_typed/123
+                        time:   [416.55 ns 419.94 ns 423.49 ns]
+                        thrpt:  [276.99 MiB/s 279.33 MiB/s 281.60 MiB/s]
+                 change:
+                        time:   [+56.678% +58.300% +59.885%] (p = 0.00 < 0.05)
+                        thrpt:  [−37.455% −36.829% −36.175%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking crud/rkyv/access_validated/123
+Benchmarking crud/rkyv/access_validated/123: Warming up for 3.0000 s
+Benchmarking crud/rkyv/access_validated/123: Collecting 100 samples in estimated 5.0001 s (347M iterations)
+Benchmarking crud/rkyv/access_validated/123: Analyzing
+crud/rkyv/access_validated/123
+                        time:   [14.351 ns 14.412 ns 14.474 ns]
+                        thrpt:  [7.9146 GiB/s 7.9487 GiB/s 7.9823 GiB/s]
+                 change:
+                        time:   [−3.6982% −1.7106% −0.0230%] (p = 0.05 > 0.05)
+                        thrpt:  [+0.0230% +1.7404% +3.8402%]
+                        No change in performance detected.
+Found 12 outliers among 100 measurements (12.00%)
+  11 (11.00%) high mild
+  1 (1.00%) high severe
+Benchmarking crud/flatwire/cast_validated/123
+Benchmarking crud/flatwire/cast_validated/123: Warming up for 3.0000 s
+Benchmarking crud/flatwire/cast_validated/123: Collecting 100 samples in estimated 5.0000 s (3.3B iterations)
+Benchmarking crud/flatwire/cast_validated/123: Analyzing
+crud/flatwire/cast_validated/123
+                        time:   [1.5048 ns 1.5149 ns 1.5253 ns]
+                        thrpt:  [75.100 GiB/s 75.617 GiB/s 76.124 GiB/s]
+                 change:
+                        time:   [−34.816% −23.014% −9.7624%] (p = 0.00 < 0.05)
+                        thrpt:  [+10.819% +29.894% +53.411%]
+                        Performance has improved.
+Found 7 outliers among 100 measurements (7.00%)
+  6 (6.00%) high mild
+  1 (1.00%) high severe
+Benchmarking crud/proto/decode_full/123
+Benchmarking crud/proto/decode_full/123: Warming up for 3.0000 s
+Benchmarking crud/proto/decode_full/123: Collecting 100 samples in estimated 5.0003 s (31M iterations)
+Benchmarking crud/proto/decode_full/123: Analyzing
+crud/proto/decode_full/123
+                        time:   [158.25 ns 159.04 ns 159.89 ns]
+                        thrpt:  [232.61 MiB/s 233.86 MiB/s 235.03 MiB/s]
+                 change:
+                        time:   [+13.603% +18.879% +23.879%] (p = 0.00 < 0.05)
+                        thrpt:  [−19.276% −15.881% −11.974%]
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+Benchmarking crud/json/parse_typed/489
+Benchmarking crud/json/parse_typed/489: Warming up for 3.0000 s
+Benchmarking crud/json/parse_typed/489: Collecting 100 samples in estimated 5.0029 s (5.0M iterations)
+Benchmarking crud/json/parse_typed/489: Analyzing
+crud/json/parse_typed/489
+                        time:   [983.00 ns 988.62 ns 994.47 ns]
+                        thrpt:  [468.94 MiB/s 471.71 MiB/s 474.41 MiB/s]
+                 change:
+                        time:   [+3.4620% +6.1738% +8.2716%] (p = 0.00 < 0.05)
+                        thrpt:  [−7.6397% −5.8148% −3.3462%]
+                        Performance has regressed.
+Benchmarking crud/json/write_typed/489
+Benchmarking crud/json/write_typed/489: Warming up for 3.0000 s
+Benchmarking crud/json/write_typed/489: Collecting 100 samples in estimated 5.0003 s (8.5M iterations)
+Benchmarking crud/json/write_typed/489: Analyzing
+crud/json/write_typed/489
+                        time:   [581.89 ns 585.54 ns 589.75 ns]
+                        thrpt:  [790.75 MiB/s 796.44 MiB/s 801.44 MiB/s]
+                 change:
+                        time:   [+5.9525% +6.6309% +7.3385%] (p = 0.00 < 0.05)
+                        thrpt:  [−6.8368% −6.2185% −5.6181%]
+                        Performance has regressed.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking crud/simd/parse_typed/489
+Benchmarking crud/simd/parse_typed/489: Warming up for 3.0000 s
+Benchmarking crud/simd/parse_typed/489: Collecting 100 samples in estimated 5.0009 s (4.6M iterations)
+Benchmarking crud/simd/parse_typed/489: Analyzing
+crud/simd/parse_typed/489
+                        time:   [1.0733 µs 1.0806 µs 1.0893 µs]
+                        thrpt:  [428.11 MiB/s 431.57 MiB/s 434.50 MiB/s]
+                 change:
+                        time:   [+24.981% +29.729% +34.089%] (p = 0.00 < 0.05)
+                        thrpt:  [−25.423% −22.916% −19.988%]
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+Benchmarking crud/rkyv/access_validated/489
+Benchmarking crud/rkyv/access_validated/489: Warming up for 3.0000 s
+Benchmarking crud/rkyv/access_validated/489: Collecting 100 samples in estimated 5.0001 s (66M iterations)
+Benchmarking crud/rkyv/access_validated/489: Analyzing
+crud/rkyv/access_validated/489
+                        time:   [81.150 ns 81.849 ns 82.539 ns]
+                        thrpt:  [5.5176 GiB/s 5.5641 GiB/s 5.6121 GiB/s]
+                 change:
+                        time:   [−7.7335% −2.3499% +2.8375%] (p = 0.44 > 0.05)
+                        thrpt:  [−2.7592% +2.4064% +8.3817%]
+                        No change in performance detected.
+Found 21 outliers among 100 measurements (21.00%)
+  11 (11.00%) low severe
+  8 (8.00%) low mild
+  2 (2.00%) high severe
+Benchmarking crud/flatwire/cast_validated/489
+Benchmarking crud/flatwire/cast_validated/489: Warming up for 3.0000 s
+Benchmarking crud/flatwire/cast_validated/489: Collecting 100 samples in estimated 5.0000 s (1.5B iterations)
+Benchmarking crud/flatwire/cast_validated/489: Analyzing
+crud/flatwire/cast_validated/489
+                        time:   [3.3675 ns 3.3840 ns 3.4031 ns]
+                        thrpt:  [133.82 GiB/s 134.58 GiB/s 135.24 GiB/s]
+                 change:
+                        time:   [−18.592% −17.731% −16.893%] (p = 0.00 < 0.05)
+                        thrpt:  [+20.327% +21.553% +22.838%]
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  2 (2.00%) high mild
+  9 (9.00%) high severe
+Benchmarking crud/proto/decode_full/489
+Benchmarking crud/proto/decode_full/489: Warming up for 3.0000 s
+Benchmarking crud/proto/decode_full/489: Collecting 100 samples in estimated 5.0014 s (8.9M iterations)
+Benchmarking crud/proto/decode_full/489: Analyzing
+crud/proto/decode_full/489
+                        time:   [556.17 ns 558.78 ns 561.79 ns]
+                        thrpt:  [261.42 MiB/s 262.83 MiB/s 264.07 MiB/s]
+                 change:
+                        time:   [+22.003% +23.093% +24.217%] (p = 0.00 < 0.05)
+                        thrpt:  [−19.496% −18.761% −18.035%]
+                        Performance has regressed.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+Benchmarking crud/json/parse_typed/979
+Benchmarking crud/json/parse_typed/979: Warming up for 3.0000 s
+Benchmarking crud/json/parse_typed/979: Collecting 100 samples in estimated 5.0024 s (2.5M iterations)
+Benchmarking crud/json/parse_typed/979: Analyzing
+crud/json/parse_typed/979
+                        time:   [2.0378 µs 2.0461 µs 2.0547 µs]
+                        thrpt:  [454.40 MiB/s 456.30 MiB/s 458.17 MiB/s]
+                 change:
+                        time:   [+8.9649% +9.7178% +10.464%] (p = 0.00 < 0.05)
+                        thrpt:  [−9.4728% −8.8571% −8.2274%]
+                        Performance has regressed.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+Benchmarking crud/json/write_typed/979
+Benchmarking crud/json/write_typed/979: Warming up for 3.0000 s
+Benchmarking crud/json/write_typed/979: Collecting 100 samples in estimated 5.0034 s (4.4M iterations)
+Benchmarking crud/json/write_typed/979: Analyzing
+crud/json/write_typed/979
+                        time:   [1.1414 µs 1.1463 µs 1.1516 µs]
+                        thrpt:  [810.75 MiB/s 814.46 MiB/s 817.97 MiB/s]
+                 change:
+                        time:   [+7.2842% +7.9358% +8.5797%] (p = 0.00 < 0.05)
+                        thrpt:  [−7.9017% −7.3523% −6.7896%]
+                        Performance has regressed.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high mild
+Benchmarking crud/simd/parse_typed/979
+Benchmarking crud/simd/parse_typed/979: Warming up for 3.0000 s
+Benchmarking crud/simd/parse_typed/979: Collecting 100 samples in estimated 5.0009 s (2.7M iterations)
+Benchmarking crud/simd/parse_typed/979: Analyzing
+crud/simd/parse_typed/979
+                        time:   [1.8515 µs 1.8660 µs 1.8804 µs]
+                        thrpt:  [496.50 MiB/s 500.34 MiB/s 504.28 MiB/s]
+                 change:
+                        time:   [+31.989% +32.931% +33.892%] (p = 0.00 < 0.05)
+                        thrpt:  [−25.313% −24.773% −24.236%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking crud/rkyv/access_validated/979
+Benchmarking crud/rkyv/access_validated/979: Warming up for 3.0000 s
+Benchmarking crud/rkyv/access_validated/979: Collecting 100 samples in estimated 5.0002 s (30M iterations)
+Benchmarking crud/rkyv/access_validated/979: Analyzing
+crud/rkyv/access_validated/979
+                        time:   [154.12 ns 157.94 ns 161.70 ns]
+                        thrpt:  [5.6387 GiB/s 5.7730 GiB/s 5.9158 GiB/s]
+                 change:
+                        time:   [−11.441% −9.5465% −7.6205%] (p = 0.00 < 0.05)
+                        thrpt:  [+8.2491% +10.554% +12.919%]
+                        Performance has improved.
+Benchmarking crud/flatwire/cast_validated/979
+Benchmarking crud/flatwire/cast_validated/979: Warming up for 3.0000 s
+Benchmarking crud/flatwire/cast_validated/979: Collecting 100 samples in estimated 5.0000 s (838M iterations)
+Benchmarking crud/flatwire/cast_validated/979: Analyzing
+crud/flatwire/cast_validated/979
+                        time:   [5.9233 ns 6.1317 ns 6.3936 ns]
+                        thrpt:  [142.61 GiB/s 148.70 GiB/s 153.93 GiB/s]
+                 change:
+                        time:   [−21.844% −20.264% −18.522%] (p = 0.00 < 0.05)
+                        thrpt:  [+22.733% +25.413% +27.949%]
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking crud/proto/decode_full/979
+Benchmarking crud/proto/decode_full/979: Warming up for 3.0000 s
+Benchmarking crud/proto/decode_full/979: Collecting 100 samples in estimated 5.0031 s (4.1M iterations)
+Benchmarking crud/proto/decode_full/979: Analyzing
+crud/proto/decode_full/979
+                        time:   [1.1493 µs 1.1559 µs 1.1637 µs]
+                        thrpt:  [252.41 MiB/s 254.10 MiB/s 255.58 MiB/s]
+                 change:
+                        time:   [+22.896% +24.330% +25.766%] (p = 0.00 < 0.05)
+                        thrpt:  [−20.487% −19.569% −18.630%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking crud/json/parse_typed/1956
+Benchmarking crud/json/parse_typed/1956: Warming up for 3.0000 s
+Benchmarking crud/json/parse_typed/1956: Collecting 100 samples in estimated 5.0201 s (1.2M iterations)
+Benchmarking crud/json/parse_typed/1956: Analyzing
+crud/json/parse_typed/1956
+                        time:   [4.0527 µs 4.0733 µs 4.0948 µs]
+                        thrpt:  [455.55 MiB/s 457.95 MiB/s 460.28 MiB/s]
+                 change:
+                        time:   [+9.0799% +9.9731% +10.900%] (p = 0.00 < 0.05)
+                        thrpt:  [−9.8287% −9.0686% −8.3241%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking crud/json/write_typed/1956
+Benchmarking crud/json/write_typed/1956: Warming up for 3.0000 s
+Benchmarking crud/json/write_typed/1956: Collecting 100 samples in estimated 5.0065 s (2.2M iterations)
+Benchmarking crud/json/write_typed/1956: Analyzing
+crud/json/write_typed/1956
+                        time:   [2.2162 µs 2.2248 µs 2.2331 µs]
+                        thrpt:  [835.32 MiB/s 838.46 MiB/s 841.71 MiB/s]
+                 change:
+                        time:   [+2.0225% +2.9171% +3.8035%] (p = 0.00 < 0.05)
+                        thrpt:  [−3.6641% −2.8344% −1.9824%]
+                        Performance has regressed.
+Benchmarking crud/simd/parse_typed/1956
+Benchmarking crud/simd/parse_typed/1956: Warming up for 3.0000 s
+Benchmarking crud/simd/parse_typed/1956: Collecting 100 samples in estimated 5.0036 s (1.5M iterations)
+Benchmarking crud/simd/parse_typed/1956: Analyzing
+crud/simd/parse_typed/1956
+                        time:   [3.2033 µs 3.2162 µs 3.2320 µs]
+                        thrpt:  [577.16 MiB/s 580.00 MiB/s 582.33 MiB/s]
+                 change:
+                        time:   [+22.839% +23.555% +24.275%] (p = 0.00 < 0.05)
+                        thrpt:  [−19.533% −19.064% −18.593%]
+                        Performance has regressed.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking crud/rkyv/access_validated/1956
+Benchmarking crud/rkyv/access_validated/1956: Warming up for 3.0000 s
+Benchmarking crud/rkyv/access_validated/1956: Collecting 100 samples in estimated 5.0003 s (17M iterations)
+Benchmarking crud/rkyv/access_validated/1956: Analyzing
+crud/rkyv/access_validated/1956
+                        time:   [292.41 ns 299.81 ns 307.28 ns]
+                        thrpt:  [5.9283 GiB/s 6.0761 GiB/s 6.2299 GiB/s]
+                 change:
+                        time:   [−7.4781% −3.5092% +0.8207%] (p = 0.12 > 0.05)
+                        thrpt:  [−0.8140% +3.6368% +8.0826%]
+                        No change in performance detected.
+Benchmarking crud/flatwire/cast_validated/1956
+Benchmarking crud/flatwire/cast_validated/1956: Warming up for 3.0000 s
+Benchmarking crud/flatwire/cast_validated/1956: Collecting 100 samples in estimated 5.0000 s (468M iterations)
+Benchmarking crud/flatwire/cast_validated/1956: Analyzing
+crud/flatwire/cast_validated/1956
+                        time:   [10.612 ns 10.755 ns 10.996 ns]
+                        thrpt:  [165.67 GiB/s 169.37 GiB/s 171.66 GiB/s]
+                 change:
+                        time:   [−27.771% −27.194% −26.493%] (p = 0.00 < 0.05)
+                        thrpt:  [+36.041% +37.352% +38.448%]
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  7 (7.00%) high mild
+  4 (4.00%) high severe
+Benchmarking crud/proto/decode_full/1956
+Benchmarking crud/proto/decode_full/1956: Warming up for 3.0000 s
+Benchmarking crud/proto/decode_full/1956: Collecting 100 samples in estimated 5.0007 s (2.2M iterations)
+Benchmarking crud/proto/decode_full/1956: Analyzing
+crud/proto/decode_full/1956
+                        time:   [2.2682 µs 2.2887 µs 2.3135 µs]
+                        thrpt:  [253.51 MiB/s 256.26 MiB/s 258.58 MiB/s]
+                 change:
+                        time:   [+25.921% +26.978% +28.099%] (p = 0.00 < 0.05)
+                        thrpt:  [−21.935% −21.246% −20.585%]
+                        Performance has regressed.
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking crud/json/parse_typed/9812
+Benchmarking crud/json/parse_typed/9812: Warming up for 3.0000 s
+Benchmarking crud/json/parse_typed/9812: Collecting 100 samples in estimated 5.1032 s (247k iterations)
+Benchmarking crud/json/parse_typed/9812: Analyzing
+crud/json/parse_typed/9812
+                        time:   [20.419 µs 20.481 µs 20.547 µs]
+                        thrpt:  [455.41 MiB/s 456.89 MiB/s 458.27 MiB/s]
+                 change:
+                        time:   [+9.3383% +10.162% +10.964%] (p = 0.00 < 0.05)
+                        thrpt:  [−9.8805% −9.2247% −8.5408%]
+                        Performance has regressed.
+Found 8 outliers among 100 measurements (8.00%)
+  8 (8.00%) high mild
+Benchmarking crud/json/write_typed/9812
+Benchmarking crud/json/write_typed/9812: Warming up for 3.0000 s
+Benchmarking crud/json/write_typed/9812: Collecting 100 samples in estimated 5.0271 s (470k iterations)
+Benchmarking crud/json/write_typed/9812: Analyzing
+crud/json/write_typed/9812
+                        time:   [10.628 µs 10.683 µs 10.758 µs]
+                        thrpt:  [869.77 MiB/s 875.88 MiB/s 880.49 MiB/s]
+                 change:
+                        time:   [+1.5979% +2.4626% +3.2460%] (p = 0.00 < 0.05)
+                        thrpt:  [−3.1439% −2.4034% −1.5728%]
+                        Performance has regressed.
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking crud/simd/parse_typed/9812
+Benchmarking crud/simd/parse_typed/9812: Warming up for 3.0000 s
+Benchmarking crud/simd/parse_typed/9812: Collecting 100 samples in estimated 5.0452 s (333k iterations)
+Benchmarking crud/simd/parse_typed/9812: Analyzing
+crud/simd/parse_typed/9812
+                        time:   [15.212 µs 15.333 µs 15.458 µs]
+                        thrpt:  [605.36 MiB/s 610.30 MiB/s 615.14 MiB/s]
+                 change:
+                        time:   [+6.6945% +7.8219% +8.8853%] (p = 0.00 < 0.05)
+                        thrpt:  [−8.1602% −7.2545% −6.2745%]
+                        Performance has regressed.
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high mild
+Benchmarking crud/rkyv/access_validated/9812
+Benchmarking crud/rkyv/access_validated/9812: Warming up for 3.0000 s
+Benchmarking crud/rkyv/access_validated/9812: Collecting 100 samples in estimated 5.0025 s (3.3M iterations)
+Benchmarking crud/rkyv/access_validated/9812: Analyzing
+crud/rkyv/access_validated/9812
+                        time:   [1.5995 µs 1.6246 µs 1.6473 µs]
+                        thrpt:  [5.5474 GiB/s 5.6250 GiB/s 5.7132 GiB/s]
+                 change:
+                        time:   [−4.7907% −1.2359% +2.5596%] (p = 0.57 > 0.05)
+                        thrpt:  [−2.4957% +1.2513% +5.0317%]
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low severe
+  4 (4.00%) low mild
+Benchmarking crud/flatwire/cast_validated/9812
+Benchmarking crud/flatwire/cast_validated/9812: Warming up for 3.0000 s
+Benchmarking crud/flatwire/cast_validated/9812: Collecting 100 samples in estimated 5.0001 s (101M iterations)
+Benchmarking crud/flatwire/cast_validated/9812: Analyzing
+crud/flatwire/cast_validated/9812
+                        time:   [48.795 ns 49.108 ns 49.481 ns]
+                        thrpt:  [184.68 GiB/s 186.08 GiB/s 187.28 GiB/s]
+                 change:
+                        time:   [−30.145% −29.749% −29.326%] (p = 0.00 < 0.05)
+                        thrpt:  [+41.495% +42.346% +43.154%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking crud/proto/decode_full/9812
+Benchmarking crud/proto/decode_full/9812: Warming up for 3.0000 s
+Benchmarking crud/proto/decode_full/9812: Collecting 100 samples in estimated 5.0271 s (470k iterations)
+Benchmarking crud/proto/decode_full/9812: Analyzing
+crud/proto/decode_full/9812
+                        time:   [10.676 µs 10.760 µs 10.854 µs]
+                        thrpt:  [271.31 MiB/s 273.69 MiB/s 275.84 MiB/s]
+                 change:
+                        time:   [+24.309% +25.128% +26.016%] (p = 0.00 < 0.05)
+                        thrpt:  [−20.645% −20.082% −19.555%]
+                        Performance has regressed.
+Found 7 outliers among 100 measurements (7.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+
+Benchmarking bigdoc/json/parse_typed/12275475
+Benchmarking bigdoc/json/parse_typed/12275475: Warming up for 3.0000 s
+Benchmarking bigdoc/json/parse_typed/12275475: Collecting 100 samples in estimated 5.4042 s (200 iterations)
+Benchmarking bigdoc/json/parse_typed/12275475: Analyzing
+bigdoc/json/parse_typed/12275475
+                        time:   [27.147 ms 27.272 ms 27.401 ms]
+                        thrpt:  [427.25 MiB/s 429.26 MiB/s 431.23 MiB/s]
+                 change:
+                        time:   [+0.0117% +0.8727% +1.7187%] (p = 0.10 > 0.05)
+                        thrpt:  [−1.6897% −0.8652% −0.0117%]
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking bigdoc/json/parse_value_dom/12275475
+Benchmarking bigdoc/json/parse_value_dom/12275475: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 5.8s, or reduce sample count to 80.
+Benchmarking bigdoc/json/parse_value_dom/12275475: Collecting 100 samples in estimated 5.7713 s (100 iterations)
+Benchmarking bigdoc/json/parse_value_dom/12275475: Analyzing
+bigdoc/json/parse_value_dom/12275475
+                        time:   [56.738 ms 57.031 ms 57.340 ms]
+                        thrpt:  [204.16 MiB/s 205.27 MiB/s 206.33 MiB/s]
+                 change:
+                        time:   [−2.6400% −1.9101% −1.2084%] (p = 0.00 < 0.05)
+                        thrpt:  [+1.2232% +1.9473% +2.7116%]
+                        Performance has improved.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+Benchmarking bigdoc/simd/parse_typed/12275475
+Benchmarking bigdoc/simd/parse_typed/12275475: Warming up for 3.0000 s
+Benchmarking bigdoc/simd/parse_typed/12275475: Collecting 100 samples in estimated 7.2571 s (300 iterations)
+Benchmarking bigdoc/simd/parse_typed/12275475: Analyzing
+bigdoc/simd/parse_typed/12275475
+                        time:   [23.045 ms 23.103 ms 23.165 ms]
+                        thrpt:  [505.37 MiB/s 506.73 MiB/s 508.01 MiB/s]
+                 change:
+                        time:   [−6.1458% −4.7153% −3.3194%] (p = 0.00 < 0.05)
+                        thrpt:  [+3.4334% +4.9486% +6.5482%]
+                        Performance has improved.
+Found 7 outliers among 100 measurements (7.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking bigdoc/rkyv/access_validated/12275475
+Benchmarking bigdoc/rkyv/access_validated/12275475: Warming up for 3.0000 s
+
+Warning: Unable to complete 100 samples in 5.0s. You may wish to increase target time to 8.1s, enable flat sampling, or reduce sample count to 50.
+Benchmarking bigdoc/rkyv/access_validated/12275475: Collecting 100 samples in estimated 8.0773 s (5050 iterations)
+Benchmarking bigdoc/rkyv/access_validated/12275475: Analyzing
+bigdoc/rkyv/access_validated/12275475
+                        time:   [1.4691 ms 1.5056 ms 1.5452 ms]
+                        thrpt:  [7.3987 GiB/s 7.5933 GiB/s 7.7820 GiB/s]
+                 change:
+                        time:   [−29.657% −27.467% −25.336%] (p = 0.00 < 0.05)
+                        thrpt:  [+33.933% +37.869% +42.160%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high mild
+Benchmarking bigdoc/flatwire/cast_validated/12275475
+Benchmarking bigdoc/flatwire/cast_validated/12275475: Warming up for 3.0000 s
+Benchmarking bigdoc/flatwire/cast_validated/12275475: Collecting 100 samples in estimated 5.2144 s (81k iterations)
+Benchmarking bigdoc/flatwire/cast_validated/12275475: Analyzing
+bigdoc/flatwire/cast_validated/12275475
+                        time:   [63.184 µs 63.435 µs 63.730 µs]
+                        thrpt:  [179.39 GiB/s 180.22 GiB/s 180.94 GiB/s]
+                 change:
+                        time:   [−29.379% −28.680% −28.024%] (p = 0.00 < 0.05)
+                        thrpt:  [+38.935% +40.212% +41.601%]
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  5 (5.00%) high mild
+  6 (6.00%) high severe
+
+     Running benches/zerocopy.rs (target/release/build/serde-bench/3dc51737bdf7e334/out/zerocopy-3dc51737bdf7e334)
+Gnuplot not found, using plotters backend
+Benchmarking zerocopy/rkyv/serialize/10000
+Benchmarking zerocopy/rkyv/serialize/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/rkyv/serialize/10000: Collecting 100 samples in estimated 5.6717 s (40k iterations)
+Benchmarking zerocopy/rkyv/serialize/10000: Analyzing
+zerocopy/rkyv/serialize/10000
+                        time:   [136.38 µs 137.18 µs 138.15 µs]
+                        thrpt:  [4.3146 GiB/s 4.3451 GiB/s 4.3706 GiB/s]
+                 change:
+                        time:   [+0.0760% +1.2859% +2.5524%] (p = 0.08 > 0.05)
+                        thrpt:  [−2.4889% −1.2696% −0.0759%]
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking zerocopy/rkyv/access_unchecked/10000
+Benchmarking zerocopy/rkyv/access_unchecked/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/rkyv/access_unchecked/10000: Collecting 100 samples in estimated 5.0000 s (11B iterations)
+Benchmarking zerocopy/rkyv/access_unchecked/10000: Analyzing
+zerocopy/rkyv/access_unchecked/10000
+                        time:   [460.00 ps 462.18 ps 464.59 ps]
+                        thrpt:  [1282977 GiB/s 1289651 GiB/s 1295764 GiB/s]
+                 change:
+                        time:   [−43.966% −43.654% −43.340%] (p = 0.00 < 0.05)
+                        thrpt:  [+76.492% +77.475% +78.463%]
+                        Performance has improved.
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+Benchmarking zerocopy/rkyv/access_validated/10000
+Benchmarking zerocopy/rkyv/access_validated/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/rkyv/access_validated/10000: Collecting 100 samples in estimated 5.7494 s (30k iterations)
+Benchmarking zerocopy/rkyv/access_validated/10000: Analyzing
+zerocopy/rkyv/access_validated/10000
+                        time:   [193.35 µs 197.19 µs 200.55 µs]
+                        thrpt:  [2.9721 GiB/s 3.0227 GiB/s 3.0828 GiB/s]
+                 change:
+                        time:   [−8.4545% −3.7484% +1.6075%] (p = 0.24 > 0.05)
+                        thrpt:  [−1.5821% +3.8943% +9.2353%]
+                        No change in performance detected.
+Benchmarking zerocopy/rkyv/deserialize_full/10000
+Benchmarking zerocopy/rkyv/deserialize_full/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/rkyv/deserialize_full/10000: Collecting 100 samples in estimated 5.3629 s (10k iterations)
+Benchmarking zerocopy/rkyv/deserialize_full/10000: Analyzing
+zerocopy/rkyv/deserialize_full/10000
+                        time:   [526.95 µs 530.82 µs 535.04 µs]
+                        thrpt:  [1.1140 GiB/s 1.1229 GiB/s 1.1311 GiB/s]
+                 change:
+                        time:   [−0.4392% +0.0406% +0.5348%] (p = 0.96 > 0.05)
+                        thrpt:  [−0.5320% −0.0406% +0.4412%]
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+Benchmarking zerocopy/flatwire/encode/10000
+Benchmarking zerocopy/flatwire/encode/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/flatwire/encode/10000: Collecting 100 samples in estimated 5.5099 s (50k iterations)
+Benchmarking zerocopy/flatwire/encode/10000: Analyzing
+zerocopy/flatwire/encode/10000
+                        time:   [108.85 µs 109.38 µs 110.01 µs]
+                        thrpt:  [4.0637 GiB/s 4.0868 GiB/s 4.1070 GiB/s]
+                 change:
+                        time:   [−5.2498% −3.8531% −2.5252%] (p = 0.00 < 0.05)
+                        thrpt:  [+2.5906% +4.0076% +5.5407%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking zerocopy/flatwire/cast/10000
+Benchmarking zerocopy/flatwire/cast/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/flatwire/cast/10000: Collecting 100 samples in estimated 5.0000 s (5.1B iterations)
+Benchmarking zerocopy/flatwire/cast/10000: Analyzing
+zerocopy/flatwire/cast/10000
+                        time:   [811.35 ps 879.01 ps 953.39 ps]
+                        thrpt:  [468889 GiB/s 508568 GiB/s 550976 GiB/s]
+                 change:
+                        time:   [−24.789% −11.085% +8.3930%] (p = 0.23 > 0.05)
+                        thrpt:  [−7.7432% +12.467% +32.960%]
+                        No change in performance detected.
+Benchmarking zerocopy/flatwire/cast_validated/10000
+Benchmarking zerocopy/flatwire/cast_validated/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/flatwire/cast_validated/10000: Collecting 100 samples in estimated 5.0166 s (778k iterations)
+Benchmarking zerocopy/flatwire/cast_validated/10000: Analyzing
+zerocopy/flatwire/cast_validated/10000
+                        time:   [6.5727 µs 6.5954 µs 6.6215 µs]
+                        thrpt:  [67.513 GiB/s 67.780 GiB/s 68.014 GiB/s]
+                 change:
+                        time:   [−26.471% −25.526% −24.688%] (p = 0.00 < 0.05)
+                        thrpt:  [+32.780% +34.275% +36.001%]
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+Benchmarking zerocopy/flatwire/symbol_lookup/10000
+Benchmarking zerocopy/flatwire/symbol_lookup/10000: Warming up for 3.0000 s
+Benchmarking zerocopy/flatwire/symbol_lookup/10000: Collecting 100 samples in estimated 5.0260 s (864k iterations)
+Benchmarking zerocopy/flatwire/symbol_lookup/10000: Analyzing
+zerocopy/flatwire/symbol_lookup/10000
+                        time:   [5.7375 µs 5.7578 µs 5.7795 µs]
+                        thrpt:  [77.348 GiB/s 77.639 GiB/s 77.914 GiB/s]
+                 change:
+                        time:   [−7.5777% −5.5900% −3.7845%] (p = 0.00 < 0.05)
+                        thrpt:  [+3.9334% +5.9210% +8.1989%]
+                        Performance has improved.
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+

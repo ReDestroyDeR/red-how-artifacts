@@ -1,0 +1,21 @@
+// Домен совпадает с Rust-стороной (prost derive) и с JSON-моделью.
+syntax = "proto3";
+
+package serdebench.v1;
+
+option go_package = "redhow/researches/serde/go/tickpb";
+
+message Tick {
+  string symbol = 1;
+  string venue = 2;
+  uint64 price = 3;
+  uint64 qty = 4;
+  int64 ts_ms = 5;
+  string side = 6;
+  uint64 order_id = 7;
+  uint32 flags = 8;
+}
+
+message Batch {
+  repeated Tick ticks = 1;
+}

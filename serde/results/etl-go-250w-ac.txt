@@ -1,0 +1,13 @@
+поток: 250 окон × 32768 тиков ≈ 1.0 GB NDJSON-эквивалента
+
+| подход | время обработки | формат, GB | MB/s формата | тиков/с |
+|---|---:|---:|---:|---:|
+| read/v1_decoder_stream | 9.347s | 0.94 | 103 | 0.9M |
+| read/easyjson_per_line | 3.004s | 0.94 | 319 | 2.7M |
+| read/flatwire | 7ms | 0.37 | 56508 | 1234.4M |
+| read/proto | 1.219s | 0.29 | 248 | 6.7M |
+| read/v1_zstd | 10.849s | 0.94 | 88 | 0.8M |
+| write/v1_ndjson | 2.098s | 0.94 | 457 | 3.9M |
+| write/easyjson_ndjson | 2.363s | 0.94 | 406 | 3.5M |
+| write/flatwire | 259ms | 0.37 | 1446 | 31.6M |
+| write/proto | 909ms | 0.29 | 332 | 9.0M |

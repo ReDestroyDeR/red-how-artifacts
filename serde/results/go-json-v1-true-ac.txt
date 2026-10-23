@@ -1,0 +1,6 @@
+BenchmarkJSON/v1/unmarshal_reflection-12         	     202	  11712270 ns/op	 104.81 MB/s	 3660075 B/op	   20025 allocs/op
+BenchmarkJSON/v1/unmarshal_into_any_dom-12       	     205	  11753343 ns/op	 104.44 MB/s	 6090114 B/op	  243085 allocs/op
+BenchmarkJSON/v1/marshal_reflection-12           	    1250	   1925042 ns/op	 637.68 MB/s	 1232553 B/op	       2 allocs/op
+BenchmarkJSON/easyjson/unmarshal-12              	     594	   4148374 ns/op	 295.91 MB/s	 3659769 B/op	   20019 allocs/op
+BenchmarkJSON/easyjson/marshal-12                	    2010	   1226925 ns/op	1000.52 MB/s	 1243810 B/op	      57 allocs/op
+ok  	redhow/researches/serde/go	12.545s

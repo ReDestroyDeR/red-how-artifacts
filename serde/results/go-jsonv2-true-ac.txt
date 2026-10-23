@@ -1,0 +1,5 @@
+BenchmarkJSONV2/v2/unmarshal-12         	     470	   5040129 ns/op	 243.56 MB/s	 3581616 B/op	      22 allocs/op
+BenchmarkJSONV2/v2/token_walk-12        	     868	   2753844 ns/op	 445.76 MB/s	    8840 B/op	      22 allocs/op
+BenchmarkJSONV2/v2/marshal-12           	     883	   2717998 ns/op	 451.64 MB/s	 1289440 B/op	       3 allocs/op
+BenchmarkJSONV2/v1onv2/unmarshal_reflection-12         	     391	   6130967 ns/op	 200.22 MB/s	 3581598 B/op	      22 allocs/op
+ok  	redhow/researches/serde/go	10.000s

@@ -1,0 +1,16 @@
+    Finished `release` profile [optimized] target(s) in 0.17s
+     Running `target/release/etl --windows 250`
+аллокатор: system (macOS malloc) | поток: 250 окон × 32768 тиков ≈ 1.0 GB NDJSON-эквивалента (сжатие вне read-таймера)
+
+| подход | время обработки | формат, GB | MB/s формата | тиков/с |
+|---|---:|---:|---:|---:|
+| read/serde_stream | 1.99s | 0.94 | 483 | 4.1M |
+| read/simd_lines | 3.84s | 0.94 | 250 | 2.1M |
+| read/flatwire | 6.72ms | 0.37 | 55820 | 1219.4M |
+| read/rkyv | 97.15ms | 0.49 | 5147 | 84.3M |
+| read/proto | 1.17s | 0.29 | 259 | 7.0M |
+| read/serde_zstd | 2.57s | 0.94 | 373 | 3.2M |
+| write/serde | 995.84ms | 0.94 | 963 | 8.2M |
+| write/flatwire | 69.92ms | 0.37 | 5363 | 117.2M |
+| write/rkyv | 121.06ms | 0.49 | 4130 | 67.7M |
+| write/proto | 431.65ms | 0.29 | 699 | 19.0M |
