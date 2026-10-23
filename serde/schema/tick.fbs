@@ -1,6 +1,5 @@
 // Схема тика для FlatBuffers — зеркало структур в rust/src/lib.rs (Tick)
 // и go/tick.go. Слоты 0..7 задают порядок полей в vtable.
-namespace serdebench;
 
 table Tick {
   symbol: string (id: 0);

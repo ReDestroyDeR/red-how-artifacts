@@ -9,10 +9,12 @@ use std::hint::black_box;
 
 use zerocopy::{FromBytes, Immutable, IntoBytes, KnownLayout};
 
-/// flatc-кодогенерация из schema/tick.fbs (FlatBuffers).
-/// Файл сам объявляет `pub mod serdebench` (namespace схемы).
+/// flatc-кодогенерация из schema/*.fbs (FlatBuffers).
+/// Сгенерированные файлы ссылаются друг на друга через crate::tick_generated::*.
 #[path = "tick_generated.rs"]
-pub mod fb;
+pub mod tick_generated;
+#[path = "bigdoc_generated.rs"]
+pub mod bigdoc_generated;
 
 // Аллокатор выбирается фичей на этапе сборки, ровно один на бинарь.
 // Отсутствие обеих фич = системный аллокатор (macOS libmalloc).

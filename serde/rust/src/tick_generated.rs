@@ -3,10 +3,6 @@
 extern crate alloc;
 
 
-#[allow(unused_imports, dead_code)]
-pub mod serdebench {
-
-
 pub enum TickOffset {}
 #[derive(Copy, Clone, PartialEq)]
 
@@ -293,5 +289,3 @@ pub fn finish_tick_buffer<'a, 'b, A: ::flatbuffers::Allocator + 'a>(
 pub fn finish_size_prefixed_tick_buffer<'a, 'b, A: ::flatbuffers::Allocator + 'a>(fbb: &'b mut ::flatbuffers::FlatBufferBuilder<'a, A>, root: ::flatbuffers::WIPOffset<Tick<'a>>) {
   fbb.finish_size_prefixed(root, None);
 }
-}  // pub mod serdebench
-

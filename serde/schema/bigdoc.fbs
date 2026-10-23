@@ -1,0 +1,10 @@
+// Большая коллекция одним документом (кейс bigdoc/ETL):
+// вектор тиков под общим корнем.
+include "tick.fbs";
+
+
+table BigDoc {
+  ticks: [Tick];
+}
+
+root_type BigDoc;
